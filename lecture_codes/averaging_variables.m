@@ -1,9 +1,9 @@
-function [mu, V, H] = averaging_variables(N, a, b)
+function [mu, V, H, Y] = averaging_variables(N, a, b)
 % [mu, V, H] = averaging_variables(10, -sqrt(3), sqrt(3))
 
 nreps = 100000;
 Y = zeros(nreps, 1);
-% N = 10000;
+% N = 10;
 for i=1:nreps
     X = sample_uniform(N, a, b);
     Y(i) = 1 / sqrt(N) * sum(X);
