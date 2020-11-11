@@ -10,13 +10,21 @@ alphas = [0.25 0.1 0.05 0.01];
 nrepeats = 10000;
 
 % Bernoulli distribution as input
-mean = 0.5;
-test_ci_bernoulli(functions, Ns, alphas, nrepeats, mean);
+theta = 0.5;
+test_ci_bernoulli(functions, Ns, alphas, nrepeats, theta);
 
 % Uniform distribution as input
 a = 0;
 b = 1;
 test_ci_uniform(functions, Ns, alphas, nrepeats, a, b);
+
+% Mean Uniform distribution as input
+test_ci_mean_uniform(functions, Ns, alphas, nrepeats, a, b);
+
+% Beta distribution as input
+beta_a = 1;
+beta_b = 3;
+test_ci_beta(functions, Ns, alphas, nrepeats, beta_a, beta_b);
 
 % Normal distribution as input
 % mean_normal = 0;
