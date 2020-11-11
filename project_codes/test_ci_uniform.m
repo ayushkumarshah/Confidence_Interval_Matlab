@@ -3,7 +3,7 @@ function test_ci_uniform(functions, Ns, alphas, nrepeats, a, b)
 A = zeros(nrepeats, 1);
 B = zeros(nrepeats, 1);
 
-fprintf('Using mean uniform distribution (%d, %d) as input\n', a, b);
+fprintf('Using uniform distribution (%d, %d) as input\n', a, b);
 fprintf('----------------------------------------------\n\n');
 
 for func=functions

@@ -19,7 +19,7 @@ b = 1;
 test_ci_uniform(functions, Ns, alphas, nrepeats, a, b);
 
 % Mean Uniform distribution as input
-test_ci_mean_uniform(functions, Ns, alphas, nrepeats, a, b);
+% test_ci_mean_uniform(functions, Ns, alphas, nrepeats, a, b);
 
 % Beta distribution as input
 beta_a = 1;
