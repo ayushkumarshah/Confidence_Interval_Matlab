@@ -4,26 +4,21 @@ function test_ci(functions)
 % Arguments:
 % functions: list of functions (any integer from 0 to 10) to be tested
 
-Ns = [1 10 100 1000 10000];
-alphas = [0.5 0.25 0.05];
+Ns = [10 100 1000 10000];
+alphas = [0.25 0.1 0.05 0.01];
 
 nrepeats = 10000;
-A = zeros(nrepeats, 1);
-B = zeros(nrepeats, 1);
 
-for func=functions
-    fprintf('Function %d:\n\n', func);
-    for alpha = alphas
-        for N = Ns
-            for repeat = 1:nrepeats
-                X = sample_bernoulli(N, 0.5);
-                [A(repeat), B(repeat)] = ci(X, func);
-            end
-            fraction = sum((A <= 0.5) & (0.5 <= B)) / nrepeats;
-            fprintf('alpha: %1.2f\t N: %5d\t fraction missed: %1.3f\n', ...
-                    alpha, N, 1 - fraction);         
-        end
-        fprintf('\n');
-    end
-    fprintf('----------------------------\n');
-end
+% Bernoulli distribution as input
+mean = 0.5;
+test_ci_bernoulli(functions, Ns, alphas, nrepeats, mean);
+
+% Uniform distribution as input
+a = 0;
+b = 1;
+test_ci_uniform(functions, Ns, alphas, nrepeats, a, b);
+
+% Normal distribution as input
+% mean_normal = 0;
+% sigma_normal = 1;
+% test_ci_normal_01(functions, Ns, alphas, nrepeats, mean_normal, sigma_normal);
