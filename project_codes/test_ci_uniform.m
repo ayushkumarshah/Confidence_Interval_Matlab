@@ -11,7 +11,7 @@ for func=functions
     for alpha = alphas
         for N = Ns
             for repeat = 1:nrepeats
-                X = sample_mean_uniform(N, a, b);
+                X = sample_uniform(N, a, b);
                 [A(repeat), B(repeat)] = ci(X, func);
             end
             true_mean = (a + b) / 2; 
