@@ -4,7 +4,7 @@ A = zeros(nrepeats, 1);
 B = zeros(nrepeats, 1);
 
 fraction = [];
-fprintf('Using bernoulli distribution with theta = %1.1f as input\n', theta);
+fprintf('Using bernoulli distribution with theta = %1.2f as input\n', theta);
 fprintf('-----------------------------------------------------\n\n');
 
 for N = Ns

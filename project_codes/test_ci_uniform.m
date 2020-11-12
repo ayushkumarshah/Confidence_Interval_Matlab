@@ -4,7 +4,7 @@ A = zeros(nrepeats, 1);
 B = zeros(nrepeats, 1);
 
 fraction = [];
-fprintf('Using uniform distribution (%d, %d) as input\n', a, b);
+fprintf('Using uniform distribution (%1.2f, %1.2f) as input\n', a, b);
 fprintf('----------------------------------------------\n\n');
 
 for N = Ns

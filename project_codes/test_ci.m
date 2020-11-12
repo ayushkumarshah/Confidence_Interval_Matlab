@@ -23,12 +23,22 @@ for func=functions
     theta = 0.5;
     test_ci_bernoulli(func, Ns, alphas, nrepeats, theta);
 
+    theta = 0.01;
+    test_ci_bernoulli(func, Ns, alphas, nrepeats, theta);
+    
+    theta = 0.99;
+    test_ci_bernoulli(func, Ns, alphas, nrepeats, theta);
+    
     % Uniform distribution as input
     a = 0;
     b = 1;
     test_ci_uniform(func, Ns, alphas, nrepeats, a, b);
     
     b = 0.05;
+    test_ci_uniform(func, Ns, alphas, nrepeats, a, b);
+    
+    a = 0.95;
+    b = 1;
     test_ci_uniform(func, Ns, alphas, nrepeats, a, b);
 
     % Beta distribution as input
