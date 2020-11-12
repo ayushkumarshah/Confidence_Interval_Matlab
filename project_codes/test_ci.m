@@ -27,20 +27,15 @@ for func=functions
     a = 0;
     b = 1;
     test_ci_uniform(func, Ns, alphas, nrepeats, a, b);
+    
+    b = 0.05;
+    test_ci_uniform(func, Ns, alphas, nrepeats, a, b);
 
     % Beta distribution as input
     beta_a = 1;
     beta_b = 3;
     test_ci_beta(func, Ns, alphas, nrepeats, beta_a, beta_b);
-
-    % Mean Uniform distribution as input
-    % test_ci_mean_uniform(functions, Ns, alphas, nrepeats, a, b);
-
-    % Normal distribution as input
-    % mean_normal = 0;
-    % sigma_normal = 1;
-    % test_ci_normal_01(functions, Ns, alphas, nrepeats, mean_normal, sigma_normal);
     
-    fprintf('-----------------------------------------------------\n');
-    fprintf('-----------------------------------------------------\n\n');
+    fprintf('----------------END OF FUNCTION: %d------------------\n\n',func);
 end
+fprintf('\n-----------------------END------------------------------\n\n');
