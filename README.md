@@ -38,6 +38,10 @@ Ns = [10 100 1000 10000]
 alphas = [0.25 0.1 0.05 0.01]
 ```
 
+## Report and Slides
+
+The report and slides can be found in the `docs/` directory.
+
 ## Input data distribution
 
 The input data distributions used are:
