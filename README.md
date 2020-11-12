@@ -44,6 +44,7 @@ The input data distributions used are:
 
 - Bernoulli distribution with theta = 0.5 (True mean = 0.5)
 - Uniform distribution with a = 0, b = 1 (True mean = 0.5)
+- Uniform distribution with a = 0, b = 0.05 (True mean = 0.025)
 - Beta distribution with a = 1, b = 3 (True mean = 0.25)
 
 The distribution parameters can be changed in the file `test_ci.m`
