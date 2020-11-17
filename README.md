@@ -1,4 +1,5 @@
-# Confidence Interval Matlab
+# Confidence Interval MATLAB
+## CISC 820 Quantitative Foundations: <br>Project 3 - Confidence Interval
 
 ## Running the code
 
